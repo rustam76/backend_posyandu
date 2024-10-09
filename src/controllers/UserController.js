@@ -2,7 +2,7 @@ const { sequelize } = require('../config/db');
 
 
 // Get all users
-getUsers = async (req, res) => {
+const getUsers = async (req, res) => {
     try {
         const [results, metadata] = await sequelize.query(`
             SELECT p.*, p.id as pesertaId, u.*, u.id as userId
