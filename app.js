@@ -3,8 +3,12 @@ const app = express();
 const routes = require('./src/routes/routes');
 const authRoutes = require('./src/routes/authRoute'); // Auth routes
 
-// Middleware for JSON parsing
+
 app.use(express.json());
+
+app.get('/', (req, res) => {
+    res.send('Hello World');
+});
 
 // Auth routes
 app.use('/auth', authRoutes);
