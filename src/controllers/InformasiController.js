@@ -1,7 +1,7 @@
 const { sequelize } = require('../config/db');
 
 
-createInformasi = async (req, res) => {
+const createInformasi = async (req, res) => {
   try {
     const { title, content } = req.body;
 
@@ -19,7 +19,7 @@ createInformasi = async (req, res) => {
 
 
 
-getAllInformasi = async (req, res) => {
+const getAllInformasi = async (req, res) => {
   try {
     const informasis = await  sequelize.query(`SELECT * FROM informasi ORDER BY id DESC`, {
       type: sequelize.QueryTypes.SELECT
@@ -31,8 +31,7 @@ getAllInformasi = async (req, res) => {
 };
 
 
-
-updateInformasi = async (req, res) => {
+const updateInformasi = async (req, res) => {
   try {
     const { title, content } = req.body;
     const informasiId = req.params.id;
@@ -71,7 +70,7 @@ updateInformasi = async (req, res) => {
 };
 
 
-deleteInformasi = async (req, res) => {
+const deleteInformasi = async (req, res) => {
   try {
     const informasiId = req.params.id;
 

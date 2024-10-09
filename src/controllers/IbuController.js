@@ -2,7 +2,7 @@ const { sequelize } = require('../config/db');
 
 
 
-getAllIbus = async (req, res) => {
+const getAllIbus = async (req, res) => {
   try {
     const ibus = await sequelize.query(`
       SELECT 
@@ -28,7 +28,7 @@ getAllIbus = async (req, res) => {
 
 
 
-updateIbu = async (req, res) => {
+const updateIbu = async (req, res) => {
   try {
     const { name, identityNumber, address } = req.body;
     const ibuId = req.params.id;

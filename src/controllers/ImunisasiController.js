@@ -1,7 +1,7 @@
 const { sequelize } = require('../config/db');
 
 // Function to create Immunization (Imunisasi) using raw SQL query
-createImunisasi = async (req, res) => {
+const createImunisasi = async (req, res) => {
   try {
     const { balita_id, immunization_date, type, note } = req.body;
 
@@ -36,7 +36,7 @@ createImunisasi = async (req, res) => {
 };
 
 // Function to create Gizi using raw SQL query
-createGizi = async (req, res) => {
+const createGizi = async (req, res) => {
   try {
     const { status_gizi, berat_bayi, tinggi_bayi, umur, balita_id, tgl_gizi } = req.body;
 

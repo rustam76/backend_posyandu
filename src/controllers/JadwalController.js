@@ -1,6 +1,6 @@
 const { sequelize } = require('../config/db');
 
-createJadwal = async (req, res) => {
+const createJadwal = async (req, res) => {
   try {
     const { date, time, kader_id, lokasi, keterangan } = req.body;
 

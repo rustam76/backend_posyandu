@@ -3,7 +3,7 @@ const { sequelize } = require('../config/db');
 
 
 
-getLaporanById = async (req, res) => {
+const getLaporanById = async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -34,7 +34,7 @@ getLaporanById = async (req, res) => {
 };
 
 
-getLaporanByUserId = async (req, res) => {
+const getLaporanByUserId = async (req, res) => {
   try {
     const { id } = req.params; // Assuming userId is passed as a URL parameter
 

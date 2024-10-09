@@ -1,7 +1,7 @@
 const { sequelize } = require('../config/db');
 
 
-createBalita = async (req, res) => {
+const createBalita = async (req, res) => {
   try {
     const { name, birth_date, ibu_id } = req.body;
 
@@ -41,7 +41,7 @@ createBalita = async (req, res) => {
 };
 
 
-getAllBalitas = async (req, res) => {
+const getAllBalitas = async (req, res) => {
   try {
     const query = `
       SELECT 
@@ -66,7 +66,7 @@ getAllBalitas = async (req, res) => {
   }
 };
 
-getBalitaById = async (req, res) => {
+const getBalitaById = async (req, res) => {
   try {
     const { id } = req.params;
 

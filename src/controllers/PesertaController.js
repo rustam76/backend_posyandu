@@ -2,7 +2,7 @@ const { sequelize } = require('../config/db');
 
 const bcrypt = require('bcrypt');
 
-createPeserta = async (req, res) => {
+const createPeserta = async (req, res) => {
   try {
     const { username, password, name, identity_number, address } = req.body;
 
@@ -24,7 +24,7 @@ createPeserta = async (req, res) => {
   }
 };
 
-getAllPesertas = async (req, res) => {
+const getAllPesertas = async (req, res) => {
   try {
     const [results, metadata] = await sequelize.query(`
       SELECT p.*, u.*

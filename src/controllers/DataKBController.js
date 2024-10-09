@@ -1,7 +1,7 @@
 const { sequelize } = require('../config/db');
 
 
-createDataKB = async (req, res) => {
+const createDataKB = async (req, res) => {
   try {
     const { peserta_id, kb_date, type } = req.body;
 
@@ -30,7 +30,7 @@ createDataKB = async (req, res) => {
 };
 
 
-getAllDataKB = async (req, res) => {
+const getAllDataKB = async (req, res) => {
   try {
     const query = `
       SELECT datakb.id, datakb.type, datakb.kb_date as kbDate, peserta.id as pesertaId, peserta.name AS pesertaName, peserta.identity_number as identityNumber, peserta.address 
@@ -50,7 +50,7 @@ getAllDataKB = async (req, res) => {
 };
 
 
-getDataKBById = async (req, res) => {
+const getDataKBById = async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -80,7 +80,7 @@ getDataKBById = async (req, res) => {
 };
 
 
-updateDataKB = async (req, res) => {
+const updateDataKB = async (req, res) => {
   try {
     const { id } = req.params; // Mendapatkan id dari parameter URL
     const { kb_date, type } = req.body; // Mendapatkan kb_date dan type dari body permintaan
